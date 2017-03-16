@@ -14,10 +14,10 @@ set :keep_releases, 3
 set :linked_files, %w{config/database.yml config/options.yml}
 set :linked_dirs, %w{log run tmp}
 
-set :config_files, %w(shizoid.service)  # sidekiq-shizoid.service
+set :config_files, %w(shizoid.service)   sidekiq-shizoid.service
 set(:symlinks, [
   { source: "shizoid.service",         link: "/etc/systemd/system/#{fetch :application}.service" },
-  # { source: "sidekiq-shizoid.service", link: "/etc/systemd/system/sidekiq-#{fetch :application}.service" }
+   { source: "sidekiq-shizoid.service", link: "/etc/systemd/system/sidekiq-#{fetch :application}.service" }
 ])
 
 before 'deploy', 'deploy:generate_config_files'
