@@ -1,7 +1,7 @@
 #adapter: postgresql
 #encoding: unicode
-#host: 127.0.0.1
+#host: ec2-54-221-244-196.compute-1.amazonaws.com
 #pool: 5
-#username: shizoid
-#password: shizoid
-#database: shizoid
+#username: wmpmzcipzhmlfv
+#password: 3e5ce69ab2c859b5ddc7a5fad1305be3ad49d5a8e95af11e8e037fc370927622
+#database: d3mk69m5vbq85k
