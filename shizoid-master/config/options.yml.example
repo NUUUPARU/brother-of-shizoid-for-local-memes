@@ -1,0 +1,15 @@
+telegram:
+  token: 368207201:AAEdqDMQAyOiWcaOG-kHCIB2GS_cPits-AI
+  name: 'Erisu_bot'
+debug_level: info
+redis_url: 'redis://127.0.0.1:6380/13'
+punctuation:
+  end_sentense: '.!?'
+  all: '.!?,;:'
+anchors:
+  - shizoid_bot
+  - шизик
+  - шиза
+  - шизойд
+  - наркоман
+  - шизофазия
