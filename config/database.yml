@@ -1,7 +1,7 @@
 adapter: postgresql
 encoding: unicode
-host: ec2-54-221-244-196.compute-1.amazonaws.com
+host: ec2-54-247-92-185.eu-west-1.compute.amazonaws.com
 pool: 5
-username: wmpmzcipzhmlfv
-password: 3e5ce69ab2c859b5ddc7a5fad1305be3ad49d5a8e95af11e8e037fc370927622
-database: d3mk69m5vbq85k
+username: zzjknnhhlyhebw
+password: 34f5e08a51086cf5f5338b8b463ea9d2d005fc48914e69a7d1fabaaf06631ae0
+database: dbsjs2hc6t9vip
