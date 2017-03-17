@@ -7,6 +7,7 @@ gem 'i18n'
 gem 'rake'
 gem 'unicode'
 gem 'redis'
+gem 'concurrent-ruby'
 # gem 'sidekiq'
 
 group :development do
