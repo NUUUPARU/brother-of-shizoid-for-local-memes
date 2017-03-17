@@ -4,9 +4,9 @@ set :server_address, '10.0.0.2'
 
 set :scm, :git
 set :format, :pretty
-set :repo_url, 'git@github.com/NUUUPARU/brother-of-shizoid-for-local-memes.git'
+set :repo_url, 'git@github.com:NUUUPARU/brother-of-shizoid-for-local-memes.git'
 set :rvm_type, :user
-set :rvm_ruby_version, "2.4.0"
+set :rvm_ruby_version, "2.2.6"
 set :deploy_to, "/home/#{fetch :deploy_user}/#{fetch :application}"
 set :log, "#{fetch :deploy_to}/log"
 set :keep_releases, 3
