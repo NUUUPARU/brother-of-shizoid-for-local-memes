@@ -1,10 +1,12 @@
 module Bot
+  MUTEX = Mutex.new
 
   def self.redis
     @redis ||= Redis.new(url: Bot.configuration.redis_url)
   end
 
   class Base
+    THREAD_POOL = Concurrent::FixedThreadPool.new(5)
 
     def initialize
       Bot.logger.info 'Initializing bot'
@@ -17,10 +19,12 @@ module Bot
       Bot.logger.info 'Starting bot'
       Telegram::Bot::Client.run Bot.configuration.telegram_token do |bot|
         bot.listen do |msg|
-          begin
-            Message.new(bot, msg).process
-          rescue Exception => error
-            Bot.logger.error "#{error}"
+          Concurrent::Future.execute(executor: THREAD_POOL) do
+            begin
+              Message.new(bot, msg).process
+            rescue Exception => error
+              Bot.logger.error "#{error}"
+            end
           end
         end
       end
