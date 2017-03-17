@@ -9,7 +9,7 @@ gem 'rake'
 gem 'unicode'
 gem 'redis'
 gem 'concurrent-ruby'
-# gem 'sidekiq'
+gem 'sidekiq'
 
 group :development do
   gem 'capistrano', '~> 3.4'
