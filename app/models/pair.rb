@@ -5,8 +5,8 @@ class Pair < ActiveRecord::Base
   belongs_to :first, class_name: 'Word'
   belongs_to :second, class_name: 'Word'
 
-  def self.generate(message)
-    generate_story(message, message.words, rand(2) + 1)
+  def self.generate(message, context = [])
+    generate_story(message, [message.words, context].flatten, rand(2) + 1)
   end
 
   def self.generate_story(message, words, sentences)
@@ -14,7 +14,7 @@ class Pair < ActiveRecord::Base
     sentences.times.collect { generate_sentence(message) }.join(' ')
   end
 
-  def self.learn(message)
+  def self.learn(message, context = [])
     Word.learn message.words
 
     words = [ nil ]
